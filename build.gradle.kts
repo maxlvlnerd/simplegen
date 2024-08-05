@@ -22,3 +22,10 @@ java.toolchain {
 tasks.test {
     useJUnitPlatform()
 }
+publishing {
+    publications {
+        create<MavenPublication>("simplegen") {
+            from(components["java"])
+        }
+    }
+}
